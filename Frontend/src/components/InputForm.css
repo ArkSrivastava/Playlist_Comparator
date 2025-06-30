@@ -1,0 +1,235 @@
+.input-form-container {
+  background: rgba(15, 15, 35, 0.7);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.form-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-header p {
+  opacity: 0.8;
+  font-size: 1.1rem;
+  color: #b8c5d6;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #e8f4fd;
+}
+
+.input-group input {
+  padding: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(30, 30, 50, 0.6);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #4ecdc4;
+  background: rgba(30, 30, 50, 0.8);
+  box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+}
+
+.input-group input.error {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+.input-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.supported-platforms {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(30, 30, 50, 0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.supported-platforms h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  color: #e8f4fd;
+}
+
+.platform-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.platform {
+  padding: 0.5rem 1rem;
+  background: rgba(78, 205, 196, 0.1);
+  border: 1px solid rgba(78, 205, 196, 0.2);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4ecdc4;
+}
+
+.test-section {
+  text-align: center;
+}
+
+.test-toggle-btn {
+  padding: 0.8rem 1.5rem;
+  background: rgba(45, 45, 65, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #b8c5d6;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.test-toggle-btn:hover {
+  background: rgba(45, 45, 65, 1);
+  color: #4ecdc4;
+  border-color: rgba(78, 205, 196, 0.3);
+  transform: translateY(-1px);
+}
+
+.compare-button {
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.compare-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.compare-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.compare-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-form-container {
+    padding: 1.5rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .compare-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .test-toggle-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .input-form-container {
+    padding: 1rem;
+  }
+  
+  .form-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .platform-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
