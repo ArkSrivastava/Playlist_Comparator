@@ -1,0 +1,34 @@
+{
+  "name": "playlist-comparator",
+  "version": "1.0.0",
+  "description": "Cross-Platform Playlist Comparator - Compare playlists from Spotify, Apple Music, and more",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "dev": "./start-dev.sh",
+    "build": "cd frontend && npm run build",
+    "start": "cd backend && npm start",
+    "test": "cd backend && node test-server.js"
+  },
+  "keywords": [
+    "playlist",
+    "comparator",
+    "spotify",
+    "apple-music",
+    "music",
+    "react",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/playlist-comparator.git"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+} 
